@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riki Nur Afifuddin — Choose a direction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0b; color: #ece9e4; font-family: 'Hanken Grotesk', sans-serif; min-height: 100vh; overflow-x: hidden; }
+  a { text-decoration: none; color: inherit; }
+  .head { text-align: center; padding: 56px 24px 12px; }
+  .head .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #8a8a90; }
+  .head h1 { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(34px, 5vw, 56px); margin-top: 14px; color: #fbf9f5; letter-spacing: -0.01em; }
+  .head p { color: #9b958c; font-size: 15px; margin-top: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1100px; margin: 40px auto 0; padding: 0 24px 64px; }
+  .panel { position: relative; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 40px 36px; min-height: 360px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; transition: border-color 0.3s, transform 0.3s, background 0.3s; }
+  .panel:hover { border-color: rgba(255,255,255,0.32); transform: translateY(-4px); }
+  .panel .tag { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a90; }
+  .panel .name { margin-top: 8px; }
+  .enter { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; font-size: 14px; color: #ece9e4; }
+  .enter span { transition: transform 0.3s; }
+  .panel:hover .enter span { transform: translateX(5px); }
+
+  /* Console panel */
+  .console { background: radial-gradient(120% 100% at 0% 0%, #131316 0%, #0c0c0e 60%); }
+  .console .tag { font-family: 'JetBrains Mono', monospace; color: #79c0ff; }
+  .console .name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 38px; letter-spacing: -0.02em; color: #fafafa; }
+  .console .desc { font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.7; color: #9a9aa0; margin-top: 16px; }
+  .console .enter { font-family: 'JetBrains Mono', monospace; }
+  .swatch { display: flex; gap: 6px; margin-top: 22px; }
+  .swatch i { width: 22px; height: 22px; border-radius: 5px; border: 1px solid rgba(255,255,255,0.12); }
+
+  /* Editorial panel */
+  .editorial { background: radial-gradient(120% 100% at 100% 0%, #17150f 0%, #0d0c0b 60%); }
+  .editorial .tag { color: #c9bfae; }
+  .editorial .name { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 46px; letter-spacing: -0.01em; color: #fbf9f5; }
+  .editorial .name em { color: #c9bfae; }
+  .editorial .desc { font-size: 15px; line-height: 1.65; color: #b3ada3; margin-top: 16px; max-width: 32ch; }
+
+  .foot { text-align: center; padding: 0 24px 48px; color: #5a5a60; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.05em; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <header class="head">
+    <div class="eyebrow">Software Engineer · Jakarta</div>
+    <h1>Riki Nur Afifuddin</h1>
+    <p>Two directions for the résumé landing page — open either to explore.</p>
+  </header>
+
+  <main class="grid">
+    <a class="panel console" href="Resume-Console.dc.html">
+      <div>
+        <div class="tag">// direction a</div>
+        <div class="name">Console</div>
+        <div class="desc">Terminal-inspired. Monospace details,<br>grid lines, section indices, crisp dark UI.</div>
+        <div class="swatch"><i style="background:#0a0a0b"></i><i style="background:#131316"></i><i style="background:#e4e4e7"></i><i style="background:#79c0ff"></i></div>
+      </div>
+      <div class="enter">Enter <span>→</span></div>
+    </a>
+
+    <a class="panel editorial" href="Resume-Editorial.dc.html">
+      <div>
+        <div class="tag">Direction B</div>
+        <div class="name">Editorial <em>&</em> serif</div>
+        <div class="desc">Magazine-style. Large Instrument Serif headlines, generous whitespace, refined rhythm.</div>
+        <div class="swatch"><i style="background:#0e0d0c"></i><i style="background:#1a1813"></i><i style="background:#ece9e4"></i><i style="background:#c9bfae"></i></div>
+      </div>
+      <div class="enter">Enter <span>→</span></div>
+    </a>
+  </main>
+
+  <footer class="foot">Pick one to ship — rename it to index.html before deploying to Vercel.</footer>
+</body>
+</html>
